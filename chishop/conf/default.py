@@ -134,5 +134,5 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.staticfiles',
     'registration',
-    'djangopypi',
+    'chishop.djangopypi',
 )
