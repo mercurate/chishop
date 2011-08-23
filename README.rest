@@ -64,10 +64,17 @@ Add the following to your ``~/.pypirc`` file::
 Uploading a package: Python >=2.6
 --------------------------------------------
 
-To push the package to the local pypi::
+To register the package with the local pypi::
 
-    $ python setup.py register -r local sdist upload -r local
+    $ python setup.py register -r local
 
+To push the package (sdist, bdist_egg, upload executed sequentially) to the local pypi::
+    $ python setup.py sdist bdist_egg upload -r local
+
+Note, ``bdist_egg`` will fail on old ``distutils``, you should use ``distribute`` that supports it. Otherwise you can stick to uploading ``sdist``.
+
+And installing of course::
+    $ pip install -i http://localhost:8000 package
 
 Uploading a package: Python <2.6
 -------------------------------------------
