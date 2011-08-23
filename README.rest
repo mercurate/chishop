@@ -6,6 +6,8 @@ ChiShop/DjangoPyPI
 Installation
 ============
 
+Recommended to create a virtualenv for running this.
+
 Install dependencies::
 
     $ python bootstrap.py --distribute
@@ -15,8 +17,12 @@ Initial configuration
 ---------------------
 ::
 
-    $ $EDITOR chishop/settings.py
+    $ cp chishop/custom_settings.py.example chishop/custom_settings.py
+    $ $EDITOR chishop/custom_settings.py
     $ ./bin/django syncdb
+
+You are most likely interested in configuring MEDIA_ROOT and STATIC_ROOT,
+although for development they should be fine.
 
 Run the PyPI server
 -------------------
