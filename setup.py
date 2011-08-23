@@ -69,7 +69,7 @@ setup(
     zip_safe=False,
     data_files=data_files,
     install_requires=[
-        'django>=1.0',
+        'django>=1.3',
         'docutils',
         'django-registration>0.7',
     ],
