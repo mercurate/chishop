@@ -6,9 +6,9 @@ from django.http import (HttpResponse, HttpResponseForbidden,
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import login
 
-from djangopypi.http import login_basic_auth, HttpResponseUnauthorized
-from djangopypi.forms import ProjectForm, ReleaseForm
-from djangopypi.models import Project, Release, Classifier, UPLOAD_TO
+from chishop.djangopypi.http import login_basic_auth, HttpResponseUnauthorized
+from chishop.djangopypi.forms import ProjectForm, ReleaseForm
+from chishop.djangopypi.models import Project, Release, Classifier, UPLOAD_TO
 
 ALREADY_EXISTS_FMT = _(
     "A file named '%s' already exists for %s. Please create a new release.")

@@ -1,7 +1,7 @@
 import unittest
 import StringIO
-from djangopypi.views import parse_distutils_request, simple
-from djangopypi.models import Project, Classifier
+from chishop.djangopypi.views import parse_distutils_request, simple
+from chishop.djangopypi.models import Project, Classifier
 from django.test.client import Client
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User

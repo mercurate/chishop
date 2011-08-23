@@ -2,7 +2,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.db.models.query import Q
 
-from djangopypi.models import Project
+from chishop.djangopypi.models import Project
 
 
 def _search_query(q):

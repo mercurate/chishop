@@ -18,7 +18,7 @@ from contextlib import contextmanager
 from urlparse import urlsplit
 from setuptools.package_index import PackageIndex
 from django.contrib.auth.models import User
-from djangopypi.models import Project, Release, Classifier
+from chishop.djangopypi.models import Project, Release, Classifier
 
 
 
