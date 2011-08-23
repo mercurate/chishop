@@ -13,6 +13,11 @@ if settings.LOCAL_DEVELOPMENT:
         url(r"^%s(?P<path>.*)$" % settings.MEDIA_URL[1:], "static.serve", {
             "document_root": settings.MEDIA_ROOT}))
 
+if settings.LOCAL_DEVELOPMENT:
+    urlpatterns += patterns('django.contrib.staticfiles.views',
+        url(r'^static/(?P<path>.*)$', 'serve'),
+    )
+
 urlpatterns += patterns("",
     # Admin interface
     url(r'^admin/doc/', include("django.contrib.admindocs.urls")),
