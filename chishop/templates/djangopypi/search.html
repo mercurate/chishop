@@ -1,4 +1,5 @@
 <form action='/search' method='post'>
+    {% csrf_token %}
     <input type="text" name="search_term" id="search_term">
     <input type='submit' value=' Search '/>
 </form>
