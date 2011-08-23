@@ -1,4 +1,8 @@
 from conf.default import *
+
+# This imports from the raw settings.py, not Django-enabled settings object
+from settings import *
+
 import os
 
 DEBUG = False
@@ -10,9 +14,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'postgresql_psycopg2'
-DATABASE_NAME = 'chishop'
-DATABASE_USER = 'chishop'
-DATABASE_PASSWORD = 'chishop'
-DATABASE_HOST = ''
-DATABASE_PORT = ''
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+DATABASES['default']['NAME'] = 'chishop'
+DATABASES['default']['USER'] = 'chishop'
+DATABASES['default']['PASSWORD'] = 'chishop'
+
