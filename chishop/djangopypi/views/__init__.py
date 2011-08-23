@@ -2,12 +2,12 @@ from django.http import Http404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from djangopypi.models import Project, Release
-from djangopypi.http import HttpResponseNotImplemented
-from djangopypi.http import parse_distutils_request
-from djangopypi.views.dists import register_or_upload
-from djangopypi.views.users import create_user
-from djangopypi.views.search import search
+from chishop.djangopypi.models import Project, Release
+from chishop.djangopypi.http import HttpResponseNotImplemented
+from chishop.djangopypi.http import parse_distutils_request
+from chishop.djangopypi.views.dists import register_or_upload
+from chishop.djangopypi.views.users import create_user
+from chishop.djangopypi.views.search import search
 
 
 ACTIONS = {
