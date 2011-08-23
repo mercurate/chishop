@@ -1,9 +1,9 @@
 from conf.default import *
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
-LOCAL_DEVELOPMENT = True
+LOCAL_DEVELOPMENT = False
 
 if LOCAL_DEVELOPMENT:
     import sys
@@ -25,4 +25,13 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
+## Easy overriding, eg:
+# from settings import DATABASES
+# DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+try:
+    # Keep custom_settings.py outside version control to keep things clean
+    from custom_settings import *
+except ImportError, e:
+    pass
 

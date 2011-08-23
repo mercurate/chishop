@@ -1,0 +1,21 @@
+## Custom configuration
+# Copy as custom_settings.py and keep outside version control
+
+import os
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+LOCAL_DEVELOPMENT = True
+
+if LOCAL_DEVELOPMENT:
+    import sys
+    sys.path.append(os.path.dirname(__file__))
+
+ADMINS = (
+     ('chishop', 'example@example.org'),
+)
+
+MANAGERS = ADMINS
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
