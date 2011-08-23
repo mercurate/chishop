@@ -52,7 +52,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-here = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+here = os.path.join(os.path.abspath(os.path.dirname(os.path.dirname(__file__))), '..')
 MEDIA_ROOT = os.path.join(here, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
