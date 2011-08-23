@@ -19,3 +19,7 @@ DATABASES['default']['NAME'] = 'chishop'
 DATABASES['default']['USER'] = 'chishop'
 DATABASES['default']['PASSWORD'] = 'chishop'
 
+## These are most likely necessary to override for production
+#MEDIA_ROOT = ''
+#STATIC_ROOT = ''
+
