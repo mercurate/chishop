@@ -27,5 +27,5 @@ urlpatterns += patterns("",
     url(r'^accounts/', include('registration.backends.default.urls')),
 
     # The Chishop
-    url(r'', include("djangopypi.urls"))
+    url(r'', include("chishop.djangopypi.urls"))
 )
