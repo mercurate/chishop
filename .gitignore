@@ -1,3 +1,8 @@
+.installed.cfg
+custom_settings.py
+ENV
+media
+*.db
 .DS_Store
 *.pyc
 *~
