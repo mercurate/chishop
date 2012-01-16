@@ -32,8 +32,9 @@ ARCHITECTURES = (
     ("ultrasparc", "UltraSparc"),
 )
 
-UPLOAD_TO = getattr(settings,
-    "DJANGOPYPI_RELEASE_UPLOAD_TO", 'dist')
+#~ UPLOAD_TO = getattr(settings,
+    #~ "DJANGOPYPI_RELEASE_UPLOAD_TO", 'dist')
+UPLOAD_TO = settings.DISTS
 
 class Classifier(models.Model):
     name = models.CharField(max_length=255, unique=True)

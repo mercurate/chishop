@@ -113,6 +113,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration',
     'chishop.djangopypi',
+    'cpserver',
 )
 
 DATABASES = {
@@ -143,6 +144,8 @@ LOGIN_REDIRECT_URL = "/"
 
 UPLOAD = os.path.join(MEDIA_ROOT, 'upload')
 DISTS  = os.path.join(MEDIA_ROOT, 'dists')
+UPLOAD_URL = 'http://0.0.0.0:8000/'
+#~ UPLOAD_URL = 'http://127.0.0.1:8000/'
 
 try:
     # Keep custom_settings.py outside version control to keep things clean
