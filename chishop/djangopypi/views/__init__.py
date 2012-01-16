@@ -8,6 +8,8 @@ from chishop.djangopypi.http import parse_distutils_request
 from chishop.djangopypi.views.dists import register_or_upload
 from chishop.djangopypi.views.users import create_user
 from chishop.djangopypi.views.search import search
+from chishop.djangopypi.views.upload import upload
+from chishop.djangopypi.forms import UploadForm
 
 
 ACTIONS = {
@@ -35,6 +37,7 @@ def simple(request, template_name="djangopypi/simple.html"):
     context = RequestContext(request, {
         "dists": dists,
         "title": 'Package Index',
+        "upload_form": UploadForm()
     })
 
     return render_to_response(template_name, context_instance=context)

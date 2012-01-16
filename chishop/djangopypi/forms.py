@@ -15,3 +15,6 @@ class ReleaseForm(forms.ModelForm):
     class Meta:
         model = Release
         exclude = ['project']
+
+class UploadForm(forms.Form):
+    package  = forms.FileField(label='package')

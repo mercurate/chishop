@@ -19,6 +19,7 @@ urlpatterns = patterns("chishop.djangopypi.views",
     url(r'^(?P<dist_name>[\w\d_\.\-]+)/$', "show_links",
         {'template_name': 'djangopypi/pypi_show_links.html'},
         name="djangopypi-pypi_show_links"),
-    
-    url(r'^search','search',name='djangopypi-search')
+
+    url(r'^search','search',name='djangopypi-search'),
+    url(r'^upload','upload',name='upload')
 )

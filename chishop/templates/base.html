@@ -21,7 +21,7 @@
         {% block site_logo %}{% endblock %}
         <h1 id="site-name">{% block site_name_header %}{% endblock %}</h1>
         </div>
-        
+
         <div class="search">
             {% include "djangopypi/search.html" %}
         </div>
@@ -67,6 +67,9 @@
     <!-- Header -->
     <div id="footer">
     {% block footer %}
+        <div class="search">
+            {% include "djangopypi/upload.html" %}
+        </div>
     {% endblock %}
     </div>
     <!-- END Content -->
