@@ -32,10 +32,6 @@ ARCHITECTURES = (
     ("ultrasparc", "UltraSparc"),
 )
 
-#~ UPLOAD_TO = getattr(settings,
-    #~ "DJANGOPYPI_RELEASE_UPLOAD_TO", 'dist')
-UPLOAD_TO = settings.DISTS
-
 class Classifier(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
@@ -85,7 +81,7 @@ class Project(models.Model):
 
 class Release(models.Model):
     version = models.CharField(max_length=32)
-    distribution = models.FileField(upload_to=UPLOAD_TO)
+    distribution = models.FileField(upload_to=settings.UPLOAD_TO)
     md5_digest = models.CharField(max_length=255, blank=True)
     platform = models.CharField(max_length=128, blank=True)
     signature = models.CharField(max_length=128, blank=True)
