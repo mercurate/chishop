@@ -17,4 +17,4 @@ class ReleaseForm(forms.ModelForm):
         exclude = ['project']
 
 class UploadForm(forms.Form):
-    package  = forms.FileField(label='package')
+    package  = forms.FileField(label='')
