@@ -8,7 +8,7 @@ from django.contrib.auth import login
 
 from chishop.djangopypi.http import login_basic_auth, HttpResponseUnauthorized
 from chishop.djangopypi.forms import ProjectForm, ReleaseForm
-from chishop.djangopypi.models import Project, Release, Classifier, UPLOAD_TO
+from chishop.djangopypi.models import Project, Release, Classifier
 
 ALREADY_EXISTS_FMT = _(
     "A file named '%s' already exists for %s. Please create a new release.")
@@ -38,7 +38,7 @@ def submit_project_or_release(user, post_data, files):
             try:
                 release = Release.objects.get(version=post_data['version'],
                                               project=project,
-                                              distribution=UPLOAD_TO + '/' +
+                                              distribution=settings.UPLOAD_TO + '/' +
                                               files['distribution']._name)
                 if not allow_overwrite:
                     return HttpResponseForbidden(ALREADY_EXISTS_FMT % (
