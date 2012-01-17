@@ -19,7 +19,7 @@ def upload(request):
     form = UploadForm(request.POST, request.FILES)
     if not form.is_valid():
         print 'not valid...'
-        return redirect('/')
+        return render(request, 'djangopypi/upload.html', {'form': form})
 
     package = request.FILES['package']
     if not os.path.exists(settings.UPLOAD):
