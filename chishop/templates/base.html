@@ -27,6 +27,7 @@
         </div>
 
         <div id="user-tools">
+          <a href="{% url upload %}">Upload</a>
           {% if user.is_authenticated %}
           Welcome, <strong>{{user.username}}</strong>.
           <a href="{% url django.contrib.auth.views.logout %}?next={{request.path}}">Log out</a>

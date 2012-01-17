@@ -3,9 +3,6 @@
 {% block bread_crumbs_1 %}{% endblock %}
 
 {% block content %}
-<div class="search">
-    {% include "djangopypi/upload.html" %}
-</div>
 <table><thead><th>Updated</th><th>Package</th><th>Summary</th></thead>
 <tbody>
 {% for dist in dists %}

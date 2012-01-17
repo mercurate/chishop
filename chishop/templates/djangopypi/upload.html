@@ -1,5 +1,11 @@
+{% extends "base_site.html" %}
+
+{% block bread_crumbs_1 %}{% endblock %}
+
+{% block content %}
 <form enctype='multipart/form-data' action='/upload' method='post'>
     {% csrf_token %}
-    {{upload_form}}
+    {{form}}
     <input type='submit' value=' Upload '/>
 </form>
+{% endblock %}
